@@ -1,8 +1,12 @@
+import { Provider } from "./Configuraciones/Context";
+
 function App() {
   return (
-    <div className="App">
+    <Provider>
+      <div className="App">
       
-    </div>
+      </div>
+    </Provider>
   );
 }
 
