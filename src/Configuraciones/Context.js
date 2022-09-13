@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-export const CartContext = createContext()
+export const Context = createContext()
 
 export const Provider = ({children}) => {
 
@@ -22,8 +22,15 @@ export const Provider = ({children}) => {
         setCarrito( Carrito.filter((Producto) => Producto.Id !== Id) )
     }
   
-    const Total = () => {
+    const SubTotal1 = () => {
         return Carrito.reduce((acc, Producto) => acc + Producto.Cantidad * Producto.Precio, 0)
+    }
+    const SubTotal2 = () => {
+        return Carrito.reduce((acc, Producto) => acc + Producto.Cantidad * Producto.PrecioD * 300, 0)
+    }
+    const Total = () => {
+        const Total = SubTotal1() + Math.round(SubTotal2())
+        return Total
     }
 
     const VaciarCarrito = () => {
@@ -31,10 +38,10 @@ export const Provider = ({children}) => {
     }
     
     return (
-        <CartContext.Provider value={{Carrito, EstaEnCarrito, Cantidad, AgregarCarrito, EliminarProducto, Total, VaciarCarrito,}}>{children}</CartContext.Provider>
+        <Context.Provider value={{Carrito, EstaEnCarrito, Cantidad, AgregarCarrito, EliminarProducto, Total, VaciarCarrito,}}>{children}</Context.Provider>
     )
 }
 
-export const useCartContext = () => {
-    return useContext(CartContext)
+export const UseContext = () => {
+    return useContext(Context)
 }

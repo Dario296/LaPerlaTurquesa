@@ -6,11 +6,19 @@
 }
 .Links{
     text-decoration: none;
+    color: #ffffff;
+    &:hover{
+        color: #1976d2;
+    }
+}
+.Links1{
+    text-decoration: none;
     color: #000000;
+    &:hover{
+        color: #1976d2;
+    }
 }
 .Logo{
-    margin-top: 59.5px;
-    height: 100px;
-    width: 300px;
-    margin-left: calc(50% - 150px);
+    height: 58px;
+    width: 130px;
 }

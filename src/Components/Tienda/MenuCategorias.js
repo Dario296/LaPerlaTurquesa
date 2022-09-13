@@ -1,30 +1,31 @@
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom'
+
 function MenuCategorias() {
   return (
-    <>
-      <NavDropdown className='MenuCategorias' title="Categorias A-G" >
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Cristal de Roca'>Cristal de Roca</Link></NavDropdown.Item>
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Mostacillas'>Mostacillas</Link></NavDropdown.Item>
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Piedras'>Piedras</Link></NavDropdown.Item>
-      </NavDropdown>
-      <NavDropdown className='MenuCategorias' title="Categorias H-N" >
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Perlas'>Perlas</Link></NavDropdown.Item>
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Mostacillas'>Mostacillas</Link></NavDropdown.Item>
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Piedras'>Piedras</Link></NavDropdown.Item>
-      </NavDropdown>
-      <NavDropdown className='MenuCategorias' title="Categorias Ñ-T" >
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Perlas'>Perlas</Link></NavDropdown.Item>
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Mostacillas'>Mostacillas</Link></NavDropdown.Item>
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Piedras'>Piedras</Link></NavDropdown.Item>
-      </NavDropdown>
-      <NavDropdown className='MenuCategorias' title="Categorias U-Z" >
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Perlas'>Perlas</Link></NavDropdown.Item>
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Mostacillas'>Mostacillas</Link></NavDropdown.Item>
-        <NavDropdown.Item><Link className='Categorias' to='/Tienda/Piedras'>Piedras</Link></NavDropdown.Item>
-      </NavDropdown>
-    </>
-    
+    <div className='MenuCategorias'>
+      <div className='flex'>
+        <NavDropdown className='Menu' title="Categorias A-G" >
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Cristal de Roca'>Cristal de Roca</Link></NavDropdown.Item>
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Fimo'>Fimo</Link></NavDropdown.Item>
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Fornituras'>Fornituras</Link></NavDropdown.Item>
+          {/* <NavDropdown.Item><Link className='Links1' to='/Tienda/Categoria'>Categoria</Link></NavDropdown.Item> */}
+        </NavDropdown>
+        <NavDropdown className='Menu' title="Categorias H-N" >
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Madera'>Madera</Link></NavDropdown.Item>
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Mostacilla'>Mostacilla</Link></NavDropdown.Item>
+          {/* <NavDropdown.Item><Link className='Links1' to='/Tienda/Categoria'>Categoria</Link></NavDropdown.Item> */}
+        </NavDropdown>
+      </div>
+      <div className='flex'>
+        <NavDropdown className='Menu' title="Categorias Ñ-T" >
+          {/* <NavDropdown.Item><Link className='Links1' to='/Tienda/Categoria'>Categoria</Link></NavDropdown.Item> */}
+        </NavDropdown>
+        <NavDropdown className='Menu' title="Categorias U-Z" >
+          {/* <NavDropdown.Item><Link className='Links1' to='/Tienda/Categoria'>Categoria</Link></NavDropdown.Item> */}
+        </NavDropdown>
+      </div>
+    </div>
   );
 }
 

@@ -1,5 +1,4 @@
-$col-1: #000000;
-$col-2: #ffffff;
+$col-1: #ffffff;
 .footer{
     position: absolute;
     bottom: 0;
@@ -15,7 +14,7 @@ $col-2: #ffffff;
             .redes{
                 color: $col-1;
                 &:hover{
-                    color: $col-2;
+                    color: #1976d2;
                 }
             }
         }
@@ -25,10 +24,10 @@ $col-2: #ffffff;
         margin-bottom: -8px;
     }
     .derechos1{
-        color: $col-1;
         text-decoration: none;
+        color: $col-1;
         &:hover{
-            color: $col-2;
+            color: #1976d2;
         }
     }
     .derechos2{

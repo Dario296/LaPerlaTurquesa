@@ -1,5 +1,13 @@
+.ContenedorTienda{
+    position: relative;
+    margin-top: 40px;
+    @media only screen and (max-width: 549px){
+        margin-top: 80px;
+    }
+}
 .Card{
     position: relative;
+    border: 1px solid #1976d2;
     .Contador{
         position: absolute;
         bottom: 5px;
@@ -10,5 +18,32 @@
         .BtnAñadir{
             margin-left: calc(50% - 99px);
         }
+        .BtnCarrito{
+            color: #ffffff;
+            text-decoration: none;
+        }
     }
 }
+.MenuCategorias{
+    color: #ffffff;
+    background-image: url(./img/fondo-nav.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 60px;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media only screen and (max-width: 549px){
+        display: block;
+    }
+    .flex{
+        display: flex;
+        justify-content: center;
+        .Menu{
+            margin: 5px;
+        }
+    }
+}
+
