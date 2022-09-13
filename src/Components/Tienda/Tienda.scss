@@ -1,0 +1,14 @@
+.Card{
+    position: relative;
+    .Contador{
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        .Cantidad{
+            margin-left: calc(50% - 78px);
+        }
+        .BtnAñadir{
+            margin-left: calc(50% - 99px);
+        }
+    }
+}
