@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/LaPerlaTurquesa/static/css/main.766a4e50.css",
+    "main.js": "/LaPerlaTurquesa/static/js/main.aeb2b4f1.js",
+    "static/js/787.bf7bfac6.chunk.js": "/LaPerlaTurquesa/static/js/787.bf7bfac6.chunk.js",
+    "static/media/fondo-nav.jpg": "/LaPerlaTurquesa/static/media/fondo-nav.f7e66ac50e972c89f613.jpg",
+    "static/media/logo.png": "/LaPerlaTurquesa/static/media/logo.cbd343ad17cd9554b541.png",
+    "index.html": "/LaPerlaTurquesa/index.html",
+    "main.766a4e50.css.map": "/LaPerlaTurquesa/static/css/main.766a4e50.css.map",
+    "main.aeb2b4f1.js.map": "/LaPerlaTurquesa/static/js/main.aeb2b4f1.js.map",
+    "787.bf7bfac6.chunk.js.map": "/LaPerlaTurquesa/static/js/787.bf7bfac6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.766a4e50.css",
+    "static/js/main.aeb2b4f1.js"
+  ]
+}
