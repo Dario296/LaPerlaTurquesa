@@ -51,9 +51,11 @@ const Tienda = () => {
   return (
     <div className='ContenedorTienda'>
       <MenuCategorias/>
-      <Grid container spacing={4} columns={{ xs: 4, sm: 8, md: 12 }} direction="row" justifyContent="space-around" alignItems="center">
-        { Productos.map((Productos) => <Grid item key={Productos.Id}><CardTienda Productos={Productos}/></Grid>) }
-      </Grid>
+      <div className="contenedor">
+        <Grid container spacing={4} columns={{ xs: 4, sm: 8, md: 12 }} direction="row" justifyContent="space-around" alignItems="center">
+          { Productos.map((Productos) => <Grid item key={Productos.Id}><CardTienda Productos={Productos}/></Grid>) }
+        </Grid>
+      </div>
     </div>
     
   )

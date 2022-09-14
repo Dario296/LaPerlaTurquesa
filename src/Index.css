@@ -8,3 +8,6 @@ body{
     padding-bottom: 80px;
     min-height: 100vh;
 }
+.contenedor{
+    margin: 20px;
+}
