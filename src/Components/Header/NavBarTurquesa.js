@@ -16,11 +16,31 @@ import "./Header.scss"
 import { Badge } from '@mui/material';
 import { ShoppingCartCheckout } from '@mui/icons-material';
 import { UseContext } from '../../Configuraciones/Context';
+import app from '../../Configuraciones/Firebase';
+import { getAuth } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { useEffect, useState } from "react";
+
+const auth = getAuth(app);
 
 const NavBarTurquesa = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     const { Cantidad } = UseContext()
+    const [user, setUser] = useState({})
+    useEffect(()=>{
+      onAuthStateChanged(auth, (currentUser) => {
+        if (currentUser) {
+          setUser(currentUser)
+        }
+      })
+    },[])
+    const salir = async()=>{
+      if (user.email) {
+        await signOut(auth);
+        setUser({})
+      }
+    }
 
     const handleOpenNavMenu = (event) => {
       setAnchorElNav(event.currentTarget);
@@ -61,12 +81,12 @@ const NavBarTurquesa = () => {
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="" src="/static/images/avatar/2.jpg" />
+                                <Avatar alt={user? user.email : ""} src="/static/images/avatar/2.jpg" />
                             </IconButton>
                         </Tooltip>
                         <Menu sx={{ mt: '45px' }} id="menu-appbar" anchorEl={anchorElUser} anchorOrigin={{ vertical: 'top', horizontal: 'right', }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'right', }} open={Boolean(anchorElUser)} onClose={handleCloseUserMenu} >
                             <MenuItem onClick={handleCloseUserMenu}><Button><Link className='Links1' to="/IniciarSesion">Iniciar</Link></Button></MenuItem>
-                            <MenuItem onClick={handleCloseUserMenu}><Button><Link className='Links1' to="/">Salir</Link></Button></MenuItem>
+                            <MenuItem onClick={handleCloseUserMenu}><Button onClick={salir}><Link className='Links1' to="/">Salir</Link></Button></MenuItem>
                         </Menu>
                     </Box>
                 </Toolbar>

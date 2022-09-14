@@ -31,9 +31,11 @@ export default function CardTienda({Productos}) {
         if (Cantidad >=1) {
             const itemToCart = {
                 Id: Productos.Id,
+                Nombre: Productos.Nombre,
+                Descripcion: Productos.Descripcion,
+                Imagen: Productos.Imagen,
                 Precio: Productos.Precio,
                 PrecioD: Productos.PrecioD,
-                Nombre: Productos.Nombre,
                 Cantidad,
             }
             AgregarCarrito(itemToCart)
