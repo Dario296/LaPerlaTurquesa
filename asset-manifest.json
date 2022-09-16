@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/LaPerlaTurquesa/static/css/main.539e6426.css",
-    "main.js": "/LaPerlaTurquesa/static/js/main.82d71e8d.js",
+    "main.css": "/LaPerlaTurquesa/static/css/main.182d027d.css",
+    "main.js": "/LaPerlaTurquesa/static/js/main.d1d70370.js",
     "static/js/787.bf7bfac6.chunk.js": "/LaPerlaTurquesa/static/js/787.bf7bfac6.chunk.js",
     "static/media/fondo-nav.jpg": "/LaPerlaTurquesa/static/media/fondo-nav.f7e66ac50e972c89f613.jpg",
     "static/media/carousel3.jpg": "/LaPerlaTurquesa/static/media/carousel3.f5405d9f5c03b43a0d71.jpg",
@@ -9,12 +9,12 @@
     "static/media/carousel2.jpg": "/LaPerlaTurquesa/static/media/carousel2.c97c8720bf939cabf680.jpg",
     "static/media/carousel1.jpg": "/LaPerlaTurquesa/static/media/carousel1.3ac3df4eb475ab6c5f17.jpg",
     "index.html": "/LaPerlaTurquesa/index.html",
-    "main.539e6426.css.map": "/LaPerlaTurquesa/static/css/main.539e6426.css.map",
-    "main.82d71e8d.js.map": "/LaPerlaTurquesa/static/js/main.82d71e8d.js.map",
+    "main.182d027d.css.map": "/LaPerlaTurquesa/static/css/main.182d027d.css.map",
+    "main.d1d70370.js.map": "/LaPerlaTurquesa/static/js/main.d1d70370.js.map",
     "787.bf7bfac6.chunk.js.map": "/LaPerlaTurquesa/static/js/787.bf7bfac6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.539e6426.css",
-    "static/js/main.82d71e8d.js"
+    "static/css/main.182d027d.css",
+    "static/js/main.d1d70370.js"
   ]
 }
