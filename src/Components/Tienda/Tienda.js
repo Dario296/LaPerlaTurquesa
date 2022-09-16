@@ -3,51 +3,26 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import CardTienda from './CardTienda'
 import MenuCategorias from './MenuCategorias'
-import ListaProductos from './ProductosData'
-// import {getFirestore, collection, getDocs } from 'firebase/firestore'
-// import app from '../../Configuraciones/Firebase'
+import {getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
+import app from '../../Configuraciones/Firebase'
 import "./Tienda.scss"
 
-// const db = getFirestore(app)
+const db = getFirestore(app)
 
 const Tienda = () => {
   const [Productos, setProductos] = useState([])
   const { Categoria } = useParams()
 
-
-  // borrar lo de abajo
   useEffect(()=>{
-    if (!Categoria) {
-      setProductos(ListaProductos)
-  } else {
-      setProductos( ListaProductos.filter((Productos) => Productos.Categoria === Categoria) )
-  }
-  },[Productos, Categoria])
-  // borrar hasta aca
+    const ProductosRef = collection(db, 'Listado Productos')
+      const Respuesta = Categoria? query(ProductosRef, where('Categoria', '==', Categoria)) : ProductosRef
+      getDocs(Respuesta)
+        .then((resp) => {
+          const ProductosDB = resp.docs.map( (doc) => ({id: doc.id, ...doc.data()}) )
+          setProductos(ProductosDB)
+        })
+  },[Categoria])
 
-
-
-  // const [Productos, setProductos] = useState([])
-  // const { Categoria } = useParams()
-  // useEffect(()=>{
-  //   const getProductos = async()=>{
-  //     try {
-  //       const querySnapshot = await getDocs(collection(db,"Listado Productos"))
-  //       const docs = []
-  //       querySnapshot.forEach((doc)=>{
-  //         docs.push({...doc.data(), id: doc.id})
-  //       })
-  //       if (!Categoria) {
-  //         setProductos(docs)
-  //     } else {
-  //         setProductos( docs.filter((Productos) => Productos.Categoria === Categoria) )
-  //     }
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
-  //   getProductos();
-  // },[Productos, Categoria])
   return (
     <div className='ContenedorTienda'>
       <MenuCategorias/>

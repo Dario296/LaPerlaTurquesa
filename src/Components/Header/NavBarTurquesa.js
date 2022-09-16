@@ -26,7 +26,7 @@ const auth = getAuth(app);
 const NavBarTurquesa = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-    const { Cantidad } = UseContext()
+    const { Cantidad, Carrito } = UseContext()
     const [user, setUser] = useState({})
     useEffect(()=>{
       onAuthStateChanged(auth, (currentUser) => {
@@ -77,7 +77,7 @@ const NavBarTurquesa = () => {
                         <Button onClick={handleCloseNavMenu}><Link className='Links' to="/TusDudas">Tus Dudas</Link></Button>
                         <Button onClick={handleCloseNavMenu}><Link className='Links' to="/Contacto">Contacto</Link></Button>
                     </Box>
-                    <Button as={Link} to="/Carrito"><Badge badgeContent={Cantidad()} color="primary"><ShoppingCartCheckout className='Links'/></Badge></Button>
+                    <Button as={Link} to="/Carrito" className={Carrito.length === 0? "IconoCarrito" : ""}><Badge badgeContent={Cantidad()} color="primary"><ShoppingCartCheckout className='Links'/></Badge></Button>
                     <Box sx={{ flexGrow: 0 }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
