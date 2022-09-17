@@ -47,9 +47,9 @@ export default function CardTienda({Productos}) {
                 Id: Productos.Id,
                 Nombre: Productos.Nombre,
                 Descripcion: Productos.Descripcion,
-                Imagen: Productos.Imagen,
                 Precio: Productos.Precio,
                 PrecioD: Productos.PrecioD,
+                Link: Productos.Link,
                 Cantidad,
             }
             AgregarCarrito(itemToCart)
