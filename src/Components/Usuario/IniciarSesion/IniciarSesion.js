@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
 import app from '../../../Configuraciones/Firebase';
-import { getAuth, FacebookAuthProvider, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, FacebookAuthProvider, GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 
 const auth = getAuth(app);
 const Facebook = new FacebookAuthProvider();
@@ -14,7 +14,7 @@ const IniciarSesion = () => {
   const iniciarFacebook = async(e) =>{
     try{
       e.preventDefault();
-      await signInWithPopup(auth, Facebook)
+      await signInWithRedirect(auth, Facebook)
       navigate("/Tienda");
     }
     catch(error){
@@ -24,7 +24,7 @@ const IniciarSesion = () => {
   const iniciarGoogle = async(e) =>{
     try{
       e.preventDefault();
-      await signInWithPopup(auth, Google)
+      await signInWithRedirect(auth, Google)
       navigate("/Tienda");
     }
     catch(error){
