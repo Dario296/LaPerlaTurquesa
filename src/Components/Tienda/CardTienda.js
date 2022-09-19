@@ -57,7 +57,7 @@ export default function CardTienda({Productos}) {
     }
 
     return (
-        <Card className='Card' sx={{ width: 280, height: 420}}>
+        <Card className='Card' sx={user.email? { width: 280, height: 420}: { width: 280, height: 380}}>
             <Box sx={{display: 'flex', alignItems: 'center', margin:"10px"}}>
                 <Typography flexGrow={1}>{Productos.Nombre}</Typography>
                 { user.email? <Typography>${PrecioP}</Typography> : <></>}
@@ -84,8 +84,7 @@ export default function CardTienda({Productos}) {
                     </Box>
                 </CardActions>
                 :
-                <h6>inicia sesion para poder comprar</h6>
-
+                <h6 className='inicia'>Inicia sesion para comprar</h6>
             }
         </Card>
     );

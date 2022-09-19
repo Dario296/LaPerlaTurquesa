@@ -21,7 +21,7 @@ const FormularioDatosEnvio = ({nextStep}) => {
 
     function RealizarPedido(){
         let PrecioDolar = 300
-        let productosParaWsp = Carrito.map(Producto => `- ${Producto.Descripcion}, Cantidad: ${Producto.Cantidad}, $${Producto.Precio? Producto.Precio : Producto.PrecioD * PrecioDolar}, ${Producto.Link}      ...`);
+        let productosParaWsp = Carrito.map(Producto => `- ${Producto.Descripcion}, Cantidad: ${Producto.Cantidad}, $${Producto.Precio? Producto.Precio : Producto.PrecioD * PrecioDolar} C/U, ${Producto.Link}      ...`);
         const productosConFormatoAmigable = productosParaWsp.join('\n').split("., ").join(". ");
         let direccionmensaje = JSON.stringify(datos).replace(/[&\\#+()$~%.'"*?<>{}]/g, '').split(",").join(", ").split(":").join(": ")
         let mensaje = productosConFormatoAmigable + ". " + direccionmensaje
