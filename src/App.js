@@ -6,7 +6,6 @@ import NavBarTurquesa from "./Components/Header/NavBarTurquesa";
 import Inicio from "./Components/Inicio/Inicio";
 import Tienda from "./Components/Tienda/Tienda";
 import TusDudas from "./Components/TusDudas/TusDudas";
-import CrearCuenta from "./Components/Usuario/CrearUsuario/CrearCuenta";
 import IniciarSesion from "./Components/Usuario/IniciarSesion/IniciarSesion";
 import VerificacionPago from "./Components/VerificacionPago/VerificacionPago";
 import { Provider } from "./Configuraciones/Context";
@@ -24,7 +23,6 @@ function App() {
             <Route path="Contacto" element={<Contacto/>}/>
             <Route path="Carrito" element={<Carrito/>}/>
             <Route path="VerificacionPago" element={<VerificacionPago/>}/>
-            <Route path="CrearCuenta" element={<CrearCuenta/>}/>
             <Route path="IniciarSesion" element={<IniciarSesion/>}/>
             <Route path="*" element={<Navigate to="/"/>}/>
           </Routes>
