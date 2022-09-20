@@ -17,12 +17,18 @@ const IniciarSesion = () => {
       .then(() => {
         navigate("/Tienda");
       })
+      .catch((err) =>{
+        console.log(err);
+      })
   }
   const iniciarGoogle = (e) =>{
       e.preventDefault();
       signInWithPopup(auth, Google)
         .then(() => {
           navigate("/Tienda");
+        })
+        .catch((err) =>{
+          console.log(err);
         })
   }
   return (
