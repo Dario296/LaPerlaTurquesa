@@ -11,25 +11,19 @@ const Google = new GoogleAuthProvider();
 
 const IniciarSesion = () => {
   const navigate = useNavigate();
-  const iniciarFacebook = async(e) =>{
-    try{
-      e.preventDefault();
-      await signInWithPopup(auth, Facebook)
-      navigate("/Tienda");
-    }
-    catch(error){
-      console.log(error.message);
-    }
+  const iniciarFacebook = (e) =>{
+    e.preventDefault();
+    signInWithPopup(auth, Facebook)
+      .then(() => {
+        navigate("/Tienda");
+      })
   }
-  const iniciarGoogle = async(e) =>{
-    try{
+  const iniciarGoogle = (e) =>{
       e.preventDefault();
-      await signInWithPopup(auth, Google)
-      navigate("/Tienda");
-    }
-    catch(error){
-      console.log(error.message);
-    }
+      signInWithPopup(auth, Google)
+        .then(() => {
+          navigate("/Tienda");
+        })
   }
   return (
     <Container component="main" maxWidth="xs">
