@@ -18,7 +18,10 @@ function MenuCategorias() {
 
               </NavDropdown> */}
               <NavDropdown drop='end' className='Menu' title="Categoria C" >
-                <NavDropdown.Item><Link className='Links1' to='/Tienda/Cristal de Roca'>Cristal de Roca</Link></NavDropdown.Item>
+                <NavDropdown drop='end' className='Menu' title="Cristal de Roca" >
+                  <NavDropdown.Item><Link className='Links1' to='/Tienda/Cristal de Roca 4mm'>Cristal de Roca 4 mm</Link></NavDropdown.Item>
+                  <NavDropdown.Item><Link className='Links1' to='/Tienda/Cristal de Roca 6mm'>Cristal de Roca 6 mm</Link></NavDropdown.Item>
+                </NavDropdown>
               </NavDropdown>
               {/* <NavDropdown drop='end' className='Menu' title="Categoria D" >
 
@@ -49,48 +52,57 @@ function MenuCategorias() {
 
               </NavDropdown> */}
               <NavDropdown drop='end' className='Menu' title="Categoria M" >
-                <NavDropdown.Item><Link className='Links1' to='/Tienda/Madera'>Madera</Link></NavDropdown.Item>
+                <NavDropdown drop='end' className='Menu' title="Madera" >
+                  <NavDropdown.Item><Link className='Links1' to='/Tienda/Madera 5mm'>Madera 5mm</Link></NavDropdown.Item>
+                  <NavDropdown.Item><Link className='Links1' to='/Tienda/Madera 8mm'>Madera 8mm</Link></NavDropdown.Item>
+                  <NavDropdown.Item><Link className='Links1' to='/Tienda/Madera 10mm'>Madera 10mm</Link></NavDropdown.Item>
+                  <NavDropdown.Item><Link className='Links1' to='/Tienda/Madera 12mm'>Madera 12mm</Link></NavDropdown.Item>
+                  <NavDropdown.Item><Link className='Links1' to='/Tienda/Madera 14mm'>Madera 14mm</Link></NavDropdown.Item>
+                  <NavDropdown.Item><Link className='Links1' to='/Tienda/Madera 16mm'>Madera 16mm</Link></NavDropdown.Item>
+                  <NavDropdown.Item><Link className='Links1' to='/Tienda/Madera 18mm'>Madera 18mm</Link></NavDropdown.Item>
+                  <NavDropdown.Item><Link className='Links1' to='/Tienda/Madera 20mm'>Madera 20mm</Link></NavDropdown.Item>
+                </NavDropdown>
                 <NavDropdown.Item><Link className='Links1' to='/Tienda/Mostacilla'>Mostacilla</Link></NavDropdown.Item>
               </NavDropdown>
             </div>
             <div>
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria Ñ" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria Ñ" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria O" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria O" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria P" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria P" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria Q" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria Q" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria R" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria R" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria S" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria S" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria T" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria T" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria U" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria U" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria V" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria V" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria W" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria W" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria X" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria X" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria Y" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria Y" >
 
               </NavDropdown> */}
-              {/* <NavDropdown drop='start' className='Menu' title="Categoria Z" >
+              {/* <NavDropdown drop='end' className='Menu' title="Categoria Z" >
 
               </NavDropdown> */}
             </div>

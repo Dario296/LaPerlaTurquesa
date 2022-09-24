@@ -20,6 +20,12 @@
             text-decoration: none;
         }
     }
+    .VerMas{
+        position: absolute;
+        bottom: 5px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
 }
 .MenuCategorias{
     color: #ffffff;
@@ -28,10 +34,10 @@
     background-position: center;
     position: fixed;
     top: 59px;
+    padding-left: 20px;
     z-index: 1;
     width: 100%;
     display: flex;
-    justify-content: center;
     @media only screen and (max-width: 549px){
         display: block;
     }
@@ -40,6 +46,7 @@
         justify-content: center;
         .Menu{
             margin: 5px;
+            padding-left: 10px;
         }
     }
 }
