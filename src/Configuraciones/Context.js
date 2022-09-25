@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import Swal from 'sweetalert2'
 
 export const Context = createContext()
 
@@ -34,7 +35,19 @@ export const Provider = ({children}) => {
     }
 
     const VaciarCarrito = () => {
-        setCarrito([])
+        Swal.fire({
+            title: 'Esta seguro',
+            showDenyButton: true,
+            confirmButtonText: 'Borrar',
+            denyButtonText: `Cancelar`,
+        }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire('Borrado', '', 'success')
+              setCarrito([])
+            } else if (result.isDenied) {
+              Swal.fire('Los cambios no se guardan', '', 'info')
+            }
+        })
     }
     
     return (

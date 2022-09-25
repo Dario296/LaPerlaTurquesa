@@ -3,9 +3,13 @@ import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import React, {Fragment, useState} from 'react'
 import { UseContext } from '../../Configuraciones/Context';
+import app from '../../Configuraciones/Firebase';
+import { addDoc, collection, getFirestore } from 'firebase/firestore';
 
-const FormularioDatosEnvio = ({nextStep}) => {
-    const { Carrito } = UseContext()
+const db = getFirestore(app)
+
+const FormularioDatosEnvio = () => {
+    const { Carrito, Total } = UseContext()
     const[ datos, setDatos ] = useState({ 
         Nombre: "", 
         Apellido: "", 
@@ -20,12 +24,29 @@ const FormularioDatosEnvio = ({nextStep}) => {
     })}
 
     function RealizarPedido(){
+        ConfirmaCompra()
         let PrecioDolar = 300
         let productosParaWsp = Carrito.map(Producto => `- ${Producto.Descripcion}, Cantidad: ${Producto.Cantidad}, $${Producto.Precio? Producto.Precio : Producto.PrecioD * PrecioDolar} C/U, ${Producto.Link}      ...`);
         const productosConFormatoAmigable = productosParaWsp.join('\n').split("., ").join(". ");
         let direccionmensaje = JSON.stringify(datos).replace(/[&\\#+()$~%.'"*?<>{}]/g, '').split(",").join(", ").split(":").join(": ")
         let mensaje = productosConFormatoAmigable + ". " + direccionmensaje
         window.location.href = 'https://api.whatsapp.com/send?phone=3512591067&text=Me%20interesan%20los%20siguientes%20productos%20%20%20' + mensaje
+    }
+
+    const ConfirmaCompra = async (e) =>{
+        e.preventDefault()
+    
+        const orden = {
+          Comprador: datos,
+          Items: Carrito,
+          Total: Total()
+        }
+    
+        const ordenesRef = collection(db, 'ordenes')
+        addDoc(ordenesRef, orden)
+          .then((doc) => {
+            RealizarPedido()
+          })
     }
     
     return (
@@ -53,7 +74,7 @@ const FormularioDatosEnvio = ({nextStep}) => {
                 </Grid>
                 <div style={{display:"flex", justifyContent:"space-between", marginTop:"1rem"}}>
                     <Button component={Link} to="/Carrito">Atras</Button>
-                    {datos.Nombre === "" || datos.Apellido === "" || datos.Direccion1 === "" || datos.Ciudad === "" || datos.Provincia === "" ? <></> : <Button variant='contained' onClick={RealizarPedido}>Realizar Pedido</Button>}
+                    {datos.Nombre === "" || datos.Apellido === "" || datos.Direccion1 === "" || datos.Ciudad === "" || datos.Provincia === "" ? <></> : <Button variant='contained' type='submit' onClick={ConfirmaCompra}>Realizar Pedido</Button>}
                 </div>
             </form>
         </Fragment>
