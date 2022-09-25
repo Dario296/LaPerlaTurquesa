@@ -14,7 +14,7 @@ const FormularioDatosEnvio = () => {
         Nombre: "", 
         Apellido: "", 
         Direccion1: "", 
-        Direccion2: "", 
+        Telefono: "", 
         Ciudad: "", 
         Provincia: "" 
     })
@@ -24,7 +24,6 @@ const FormularioDatosEnvio = () => {
     })}
 
     function RealizarPedido(){
-        ConfirmaCompra()
         let PrecioDolar = 300
         let productosParaWsp = Carrito.map(Producto => `- ${Producto.Descripcion}, Cantidad: ${Producto.Cantidad}, $${Producto.Precio? Producto.Precio : Producto.PrecioD * PrecioDolar} C/U, ${Producto.Link}      ...`);
         const productosConFormatoAmigable = productosParaWsp.join('\n').split("., ").join(". ");
@@ -54,27 +53,27 @@ const FormularioDatosEnvio = () => {
             <form>
                 <Grid container spacing={3}>
                     <Grid item xs={12} sm={6}>    
-                        <input onChange={cambioImput} required placeholder='Nombre*' name="Nombre" className="form-control"/>
+                        <input onChange={cambioImput} required type="text" placeholder='Nombre*' name="Nombre" className="form-control"/>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <input onChange={cambioImput} required placeholder='Apellido*' name="Apellido" className="form-control"/>
+                        <input onChange={cambioImput} required type="text" placeholder='Apellido*' name="Apellido" className="form-control"/>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <input onChange={cambioImput} required placeholder='Direccion 1*' name="Direccion1" className="form-control"/>
+                        <input onChange={cambioImput} required type="text" placeholder='Direccion 1*' name="Direccion1" className="form-control"/>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <input onChange={cambioImput} placeholder='Direccion 2' name="Direccion2" className="form-control"/>
+                        <input onChange={cambioImput} required type="number" placeholder='Telefono*' name="Telefono" className="form-control"/>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <input onChange={cambioImput} required placeholder='Ciudad*' name="Ciudad" className="form-control"/>
+                        <input onChange={cambioImput} required type="text" placeholder='Ciudad*' name="Ciudad" className="form-control"/>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <input onChange={cambioImput} required placeholder='Estado/Provincia/Region*' name="Provincia" className="form-control"/>
+                        <input onChange={cambioImput} required type="text" placeholder='Estado/Provincia/Region*' name="Provincia" className="form-control"/>
                     </Grid>
                 </Grid>
                 <div style={{display:"flex", justifyContent:"space-between", marginTop:"1rem"}}>
                     <Button component={Link} to="/Carrito">Atras</Button>
-                    {datos.Nombre === "" || datos.Apellido === "" || datos.Direccion1 === "" || datos.Ciudad === "" || datos.Provincia === "" ? <></> : <Button variant='contained' type='submit' onClick={ConfirmaCompra}>Realizar Pedido</Button>}
+                    {datos.Nombre === "" || datos.Apellido === "" || datos.Direccion1 === "" || datos.Telefono === "" || datos.Ciudad === "" || datos.Provincia === "" ? <></> : <Button variant='contained' type='submit' onClick={ConfirmaCompra}>Realizar Pedido</Button>}
                 </div>
             </form>
         </Fragment>

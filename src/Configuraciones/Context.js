@@ -36,7 +36,7 @@ export const Provider = ({children}) => {
 
     const VaciarCarrito = () => {
         Swal.fire({
-            title: 'Esta seguro',
+            title: '¿Esta seguro?',
             showDenyButton: true,
             confirmButtonText: 'Borrar',
             denyButtonText: `Cancelar`,

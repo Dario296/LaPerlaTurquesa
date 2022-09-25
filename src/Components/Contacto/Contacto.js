@@ -1,4 +1,5 @@
 import "./Contacto.scss"
+import FormularioContacto from "./FormularioContacto"
 
 const Contacto = () => {
     return (
@@ -25,20 +26,7 @@ const Contacto = () => {
 		    						</div>
 		    					</div>
 		    				</div>
-		    				<form className="contactForm">
-		    					<div className="form-group">
-		    						<input type="text" className="form-control" placeholder="Nombre*"/>
-		    					</div>
-		    					<div className="form-group">
-		    						<input type="email" className="form-control" placeholder="Correo*"/>
-		    					</div>
-		    					<div className="form-group">
-		    						<textarea className="form-control" cols="30" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
-		    					</div>
-		    					<div className="form-group enviar-contacto">
-		    						<input type="submit" value="Enviar mensaje" className="btn btn-primary"/>
-		    					</div>
-		    				</form>
+		    				<FormularioContacto/>
 		    				<div className="w-100 social-media mt-4">
 		    					<h3 className='seguinos'>Seguinos en nuestras Redes</h3>
 		    					<p className='redes'>
