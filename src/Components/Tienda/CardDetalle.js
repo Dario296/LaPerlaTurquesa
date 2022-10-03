@@ -16,7 +16,7 @@ export default function CardDetalle({ Productos, Comprar, Restar, Sumar, user, E
                 </div>
                 <div className='mx-3'>
                     {user.email? <Typography variant='h4'>Precio: ${PrecioP}</Typography> : null}
-                    <Typography variant="h5" >{Productos.Descripcion}</Typography>
+                    <Typography variant="h5" className='Descripcion'>{Productos.Descripcion}</Typography>
                     {user.email?
                         <Box className="Contador">
                             {EstaEnCarrito(Productos.Id)
@@ -37,7 +37,7 @@ export default function CardDetalle({ Productos, Comprar, Restar, Sumar, user, E
                             }
                         </Box>
                         :
-                        <div>Inicia sesion para poder comprar</div>
+                        <div className='Inicia'>Inicia sesion para poder comprar</div>
                     }
                 </div>
             </div>
