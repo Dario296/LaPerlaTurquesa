@@ -3,18 +3,18 @@ $col-1: #ffffff;
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-image: url(./img/fondo-nav.jpg);
-    background-size: cover;
+    background-color: #333333;
     text-align: center;
-    color: $col-1;
+    color: #0BA1D8;
     .cont-list-redes{
         margin-left: -32px;
         .list-redes{
             display: inline-block;
+            margin-bottom: 5px;
             .redes{
-                color: $col-1;
+                color: #0BA1D8;
                 &:hover{
-                    color: #1976d2;
+                    color: $col-1;
                 }
             }
         }
@@ -25,9 +25,9 @@ $col-1: #ffffff;
     }
     .derechos1{
         text-decoration: none;
-        color: $col-1;
+        color: #0BA1D8;
         &:hover{
-            color: #1976d2;
+            color: $col-1;
         }
     }
     .derechos2{

@@ -1,4 +1,10 @@
 .img-car{
     min-height: 200px;
-    max-height: 400px;
+    max-height: 500px;
+    width: 75%;
+    margin-left: 12.5%;
+    @media only screen and (max-width: 420px){
+        width: 100%;
+        margin-left: 0%;
+    }
 }

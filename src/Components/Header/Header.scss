@@ -1,21 +1,20 @@
 .Nav-Bar{
-    background-image: url(./img/fondo-nav.jpg);
-    background-size: cover;
+    background-color: #333333 !important;
     height: 59.5px;
     color: black !important;
 }
 .Links{
     text-decoration: none;
-    color: #ffffff;
+    color: #0BA1D8;
     &:hover{
-        color: #1976d2;
+        color: #ffffff;
     }
 }
 .Links1{
     text-decoration: none;
     color: #000000;
     &:hover{
-        color: #1976d2;
+        color: #0BA1D8;
     }
 }
 .Links2{

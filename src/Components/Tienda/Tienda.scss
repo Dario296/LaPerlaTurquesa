@@ -7,7 +7,7 @@
 }
 .Card{
     position: relative;
-    border: 1px solid #1976d2;
+    border: 1px solid #0BA1D8;
     .Contador{
         position: absolute;
         bottom: 5px;
@@ -32,9 +32,7 @@
 }
 .MenuCategorias{
     color: #ffffff;
-    background-image: url(./img/fondo-nav.jpg);
-    background-size: cover;
-    background-position: center;
+    background-color: #333333;
     position: fixed;
     top: 59px;
     padding-left: 20px;
@@ -68,11 +66,35 @@
         margin-left: calc(50% - 142px);
         margin-bottom: 1rem;
     }
-    .Descripcion{
-        text-align: center;
-    }
     .Inicia{
         text-align: center;
+    }
+    .Cantidad{
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .Comprar{
+        margin-left: 18%;
+    }
+    .Contador{
+        margin-left: calc(50% - 185px);
+        margin-top: 10px;
+        @media only screen and (max-width: 401px){
+            margin-left: 0;
+        }
+    }
+    .TerminaCompra{
+        margin-left: 5px;
+        @media only screen and (max-width: 401px){
+            margin-left: calc(50% - 88px);
+            margin-top: 10px;
+        }
+    }
+    .SeguirCompra{
+        @media only screen and (max-width: 401px){
+            margin-left: calc(50% - 95px);
+            margin-top: 5px;
+        }
     }
     .BtnCarrito{
         color: #ffffff;

@@ -16,13 +16,13 @@ export default function CardDetalle({ Productos, Comprar, Restar, Sumar, user, E
                 </div>
                 <div className='mx-3'>
                     {user.email? <Typography variant='h4'>Precio: ${PrecioP}</Typography> : null}
-                    <Typography variant="h5" className='Descripcion'>{Productos.Descripcion}</Typography>
+                    <Typography variant="h5">{Productos.Descripcion}</Typography>
                     {user.email?
                         <Box className="Contador">
                             {EstaEnCarrito(Productos.Id)
                                 ?   <>
-                                        <Button variant="contained"><Link className='BtnCarrito' to="/Tienda">Seguir Comprando</Link></Button>
-                                        <Button  className='mx-1' variant="contained"><Link className='BtnCarrito' to="/Carrito">Terminar compra</Link></Button>
+                                        <Button className='SeguirCompra' variant="contained"><Link className='BtnCarrito' to="/Tienda">Seguir Comprando</Link></Button>
+                                        <Button  className='TerminaCompra' variant="contained"><Link className='BtnCarrito' to="/Carrito">Terminar compra</Link></Button>
                                     </>
                                 :   
                                 <>
@@ -32,7 +32,7 @@ export default function CardDetalle({ Productos, Comprar, Restar, Sumar, user, E
                                         <Button onClick={Sumar}><AddIcon/></Button>
                                     </Box>
                                     <Divider/>
-                                    <Button variant="contained" onClick={Comprar} >Añadir al Carrito</Button>
+                                    <Button variant="contained" onClick={Comprar} className="Comprar">Añadir al Carrito</Button>
                                 </>
                             }
                         </Box>

@@ -1,6 +1,7 @@
 import carousel1 from "./img/carousel1.jpg"
 import carousel2 from "./img/carousel2.jpg"
 import carousel3 from "./img/carousel3.jpg"
+import carousel4 from "./img/carousel4.jpg"
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import "./Inicio.scss"
@@ -10,13 +11,16 @@ const Inicio = () => {
       <div className="contenedor">
         <Carousel fade>
           <Carousel.Item>
-            <img className="d-block w-100 img-fluid img-car" src={carousel1} alt="First slide" />
+            <img className="d-block img-fluid img-car" src={carousel1} alt="First slide" />
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100 img-fluid img-car" src={carousel2} alt="Second slide" />
+            <img className="d-block img-fluid img-car" src={carousel2} alt="Second slide" />
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100 img-fluid img-car" src={carousel3} alt="Third slide" />
+            <img className="d-block img-fluid img-car" src={carousel3} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block img-fluid img-car" src={carousel4} alt="Third slide" />
           </Carousel.Item>
         </Carousel>
         <div className="d-md-inline-flex p-inicio">
