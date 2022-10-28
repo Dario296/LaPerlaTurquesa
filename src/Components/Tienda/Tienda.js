@@ -2,7 +2,6 @@ import { Button, Grid } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import CardTienda from './CardTienda'
-import MenuCategorias from './MenuCategorias'
 import {getFirestore, collection, getDocs, query, where, limit } from 'firebase/firestore'
 import app from '../../Configuraciones/Firebase'
 import "./Tienda.scss"
@@ -48,7 +47,6 @@ const Tienda = () => {
 
   return (
     <div className='ContenedorTienda'>
-      <MenuCategorias/>
       {
         Categoria?
         <div className="contenedor">

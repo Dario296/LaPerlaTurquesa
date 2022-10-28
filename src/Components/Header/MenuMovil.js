@@ -4,6 +4,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import React from 'react'
 import Logo from "./img/logo.png"
 import { Link } from 'react-router-dom';
+import { ButtonGroup } from 'react-bootstrap';
+import MenuCategorias from '../Tienda/MenuCategorias';
 
 const MenuMovil = () => {
 
@@ -29,10 +31,13 @@ const MenuMovil = () => {
                         <Link className='Links1' to="/">Inicio</Link>
                     </Button>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
-                    <Button>
-                        <Link className='Links1' to="/Tienda">Tienda</Link>
-                    </Button>
+                <MenuItem>
+                    <ButtonGroup aria-label="Basic example">
+                        <Button>
+                            <Link className='Links1' to="/Tienda" onClick={handleCloseNavMenu}>Tienda</Link>
+                        </Button>
+                        <MenuCategorias handleCloseNavMenu={handleCloseNavMenu}/>
+                    </ButtonGroup>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu}>
                     <Button>

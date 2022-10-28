@@ -23,25 +23,16 @@ const Inicio = () => {
             <img className="d-block img-fluid img-car" src={carousel4} alt="Third slide" />
           </Carousel.Item>
         </Carousel>
-        <div className="d-md-inline-flex p-inicio">
-          <div>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, praesentium laborum libero unde voluptatibus ipsum quisquam accusantium eum blanditiis harum, perferendis voluptatum, necessitatibus quas porro. Rem porro deleniti doloremque dolore tempore eius saepe! Suscipit quibusdam non nam fugiat, soluta nisi quos expedita dolor voluptatem eos, nemo alias maiores, modi rerum quam. Ab dicta laborum praesentium tenetur labore cumque, quisquam quo soluta illo necessitatibus inventore repellendus fuga accusamus! Eos porro sapiente amet temporibus perferendis nostrum ipsam veritatis iusto consequatur velit.
-            </p>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, praesentium laborum libero unde voluptatibus ipsum quisquam accusantium eum blanditiis harum, perferendis voluptatum, necessitatibus quas porro. Rem porro deleniti doloremque dolore tempore eius saepe! Suscipit quibusdam non nam fugiat, soluta nisi quos expedita dolor voluptatem eos, nemo alias maiores, modi rerum quam. Ab dicta laborum praesentium tenetur labore cumque, quisquam quo soluta illo necessitatibus inventore repellendus fuga accusamus! Eos porro sapiente amet temporibus perferendis nostrum ipsam veritatis iusto consequatur velit.
-            </p>
-          </div>
-          <div>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, praesentium laborum libero unde voluptatibus ipsum quisquam accusantium eum blanditiis harum, perferendis voluptatum, necessitatibus quas porro. Rem porro deleniti doloremque dolore tempore eius saepe! Suscipit quibusdam non nam fugiat, soluta nisi quos expedita dolor voluptatem eos, nemo alias maiores, modi rerum quam. Ab dicta laborum praesentium tenetur labore cumque, quisquam quo soluta illo necessitatibus inventore repellendus fuga accusamus! Eos porro sapiente amet temporibus perferendis nostrum ipsam veritatis iusto consequatur velit.
-            </p>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, praesentium laborum libero unde voluptatibus ipsum quisquam accusantium eum blanditiis harum, perferendis voluptatum, necessitatibus quas porro. Rem porro deleniti doloremque dolore tempore eius saepe! Suscipit quibusdam non nam fugiat, soluta nisi quos expedita dolor voluptatem eos, nemo alias maiores, modi rerum quam. Ab dicta laborum praesentium tenetur labore cumque, quisquam quo soluta illo necessitatibus inventore repellendus fuga accusamus! Eos porro sapiente amet temporibus perferendis nostrum ipsam veritatis iusto consequatur velit.
-            </p>
-          </div>            
-        </div>
-    </div>
+        <h2 className="Titulo">¿Quiénes somos?</h2>
+        <p className="Parrafo">Somos una empresa de más de 20 años de trayectoria.</p>
+        <p className="Parrafo">Empresa que se dedica a recorrer las principales ferias del mundo.</p>
+        <p className="Parrafo">Para la importación y exportación de insumos para artesanías.</p>
+        <p className="Parrafo">Para mantener al país en la vanguardia de la moda.</p>
+        <p className="Parrafo">Con los mejores accesorios para realzar tu belleza.</p>
+        <p className="Parrafo">El mejor asesoramiento y atención especializada.</p>
+        <p className="Parrafo">El mejor precio y calidad del mercado.</p>
+        <p className="Parrafo">Veni conoce nuestra empresa.</p>
+      </div>            
     )
 }
 

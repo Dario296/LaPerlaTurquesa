@@ -31,13 +31,15 @@
     }
 }
 .MenuCategorias{
-    color: #ffffff;
-    background-color: #333333;
-    position: fixed;
-    top: 59px;
-    padding-left: 20px;
-    z-index: 1;
-    width: 100%;
+    margin-top: 18px;
+    color: #0BA1D8;
+    @media only screen and (max-width: 900px){
+        margin: 8px;
+        color: #000000;
+        &hover{
+            color: #0BA1D8;
+        }
+    }
     .Menu{
         margin-left: 18px;
     }
