@@ -28,7 +28,7 @@ const Carrito = () => {
         <h4>Total productos: {Cantidad()}</h4>
         <h4>Total: ${Total()}</h4>
         <Button variant="contained" color="error" onClick={VaciarCarrito}>Vaciar carrito</Button>
-        <Button className="mx-3" variant="contained"><Link className="Links2" to="/VerificacionPago">Pedir Pagar</Link></Button>
+        <Button className="mx-1" variant="contained"><Link className="Links2" to="/VerificacionPago">Pedir Pagar</Link></Button>
       </>
     </div>
   )

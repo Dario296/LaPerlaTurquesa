@@ -5,7 +5,7 @@ const Contacto = () => {
     return (
       <div className="contenedor">
 		    <div className="container">
-		    	<div className="row no-gutters">
+		    	<div className="row">
 		    		<div className="col-lg-6">
 		    			<div className="contact-wrap w-100 p-md-5 p-4">
 		    				<p className="mb-4">Estamos abiertos a cualquier sugerencia o simplemente para tener una charla.</p>
@@ -38,7 +38,7 @@ const Contacto = () => {
 		    			</div>
 		    		</div>
 		    		<div className="col-lg-6 d-flex align-items-stretch">
-		    			{/* <div className="info-wrap w-100 p-5 img" style="background-image: url(images/img.jpg);"></div> */}
+		    			<div className="imgCon"></div>
 		    		</div>
 		    	</div>
 		    </div>

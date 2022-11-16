@@ -25,12 +25,12 @@ const Inicio = () => {
         </Carousel>
         <h2 className="Titulo">¿Quiénes somos?</h2>
         <p className="Parrafo">Somos una empresa de más de 20 años de trayectoria.</p>
-        <p className="Parrafo">Empresa que se dedica a recorrer las principales ferias del mundo.</p>
-        <p className="Parrafo">Para la importación y exportación de insumos para artesanías.</p>
+        <p className="Parrafo">Nos dedicamos a recorrer las principales ferias del mundo.</p>
+        <p className="Parrafo">Para la importación y exportación de insumos para artesanías bordados y accesorios de moda.</p>
         <p className="Parrafo">Para mantener al país en la vanguardia de la moda.</p>
         <p className="Parrafo">Con los mejores accesorios para realzar tu belleza.</p>
         <p className="Parrafo">El mejor asesoramiento y atención especializada.</p>
-        <p className="Parrafo">El mejor precio y calidad del mercado.</p>
+        <p className="Parrafo">Relación precio y calidad óptimo a nivel internacional.</p>
         <p className="Parrafo">Veni conoce nuestra empresa.</p>
       </div>            
     )
