@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom'
 
 function MenuCategorias({handleCloseNavMenu}) {
 
-  // <NavDropdown drop='end' className='Menu' title="Categoria" >
+  // <NavDropdown className='Menu' title="Categoria" >
   //   <NavDropdown.Item><Link className='Links1' to='/Tienda/Categoria' onClick={handleCloseNavMenu}>Categoria</Link></NavDropdown.Item>
   // </NavDropdown>
 
   return (
     <NavDropdown className='MenuCategorias' >
+
+        <NavDropdown className='Menu' title="Categoria D" >
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Dijes De Piedra' onClick={handleCloseNavMenu}>Dijes De Piedra</Link></NavDropdown.Item>
+        </NavDropdown>
 
         <NavDropdown className='Menu' title="Categoria C" >
           <NavDropdown className='Menu' title="Cristal de Roca" >

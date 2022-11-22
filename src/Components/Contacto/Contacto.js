@@ -15,11 +15,6 @@ const Contacto = () => {
 		    							<p><span>Dirección:</span><a className='direccion' href="https://goo.gl/maps/aJ4sACFVVc2sskX18">Entre Ríos 242, Córdoba</a></p>
 		    						</div>
 		    					</div>
-		    					<div className="col-md-5">
-		    						<div className="dbox w-100 d-flex align-items-start">
-		    							<p><span>Correo:</span> <a href="mailto:info@yoursite.com" className='correo'>laperlaturquesa@test.com</a></p>
-		    						</div>
-		    					</div>
 		    					<div className="col-md-3">
 		    						<div className="dbox w-100 d-flex align-items-start">
 		    							<p><span>Teléfono:</span> <a href="https://wa.me/5493515092248" className='telefono'>3515092248</a></p>

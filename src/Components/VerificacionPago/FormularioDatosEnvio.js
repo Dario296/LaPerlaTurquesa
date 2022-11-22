@@ -29,7 +29,7 @@ const FormularioDatosEnvio = () => {
         const productosConFormatoAmigable = productosParaWsp.join('\n').split("., ").join(". ");
         let direccionmensaje = JSON.stringify(datos).replace(/[&\\#+()$~%.'"*?<>{}]/g, '').split(",").join(", ").split(":").join(": ")
         let mensaje = productosConFormatoAmigable + ". " + direccionmensaje
-        window.location.href = 'https://api.whatsapp.com/send?phone=3512591067&text=Me%20interesan%20los%20siguientes%20productos%20%20%20' + mensaje
+        window.location.href = 'https://api.whatsapp.com/send?phone=5493515092248&text=Me%20interesan%20los%20siguientes%20productos%20%20%20' + mensaje
     }
 
     const ConfirmaCompra = async (e) =>{

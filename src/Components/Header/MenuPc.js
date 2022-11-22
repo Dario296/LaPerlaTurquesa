@@ -12,6 +12,9 @@ const MenuPc = () => {
             <Button>
                 <Link className='Links' to="/">Inicio</Link>
             </Button>
+            <Button>
+                <a href='https://drive.google.com/drive/u/1/folders/1ARILMprsb3_gqBtda6CxIa9ZeaL-BKOR' className='Links'>Catalogo</a>
+            </Button>
             <ButtonGroup aria-label="Basic example">
                 <Button>
                     <Link className='Links' to="/Tienda">Tienda</Link>

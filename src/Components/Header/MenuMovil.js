@@ -31,6 +31,11 @@ const MenuMovil = () => {
                         <Link className='Links1' to="/">Inicio</Link>
                     </Button>
                 </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                    <Button>
+                        <a href='https://drive.google.com/drive/u/1/folders/1ARILMprsb3_gqBtda6CxIa9ZeaL-BKOR' className='Links1'>Catalogo</a>
+                    </Button>
+                </MenuItem>
                 <MenuItem>
                     <ButtonGroup aria-label="Basic example">
                         <Button>
