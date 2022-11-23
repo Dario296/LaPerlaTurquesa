@@ -29,13 +29,13 @@ const Tienda = () => {
         })
     }
     else{
-      const RespuestaN =  query(ProductosRef, where('Estado', '==', 'Nuevo'), limit(15))
+      const RespuestaN =  query(ProductosRef, where('Estado', '==', 'Nuevo'))
       getDocs(RespuestaN)
         .then((resp) => {
           const ProductosDB = resp.docs.map( (doc) => ({id: doc.id, ...doc.data()}) )
           setProductosN(ProductosDB)
         })
-      const RespuestaO =  query(ProductosRef, where('Estado', '==', 'Oferta'), limit(15))
+      const RespuestaO =  query(ProductosRef, where('Estado', '==', 'Oferta'))
       getDocs(RespuestaO)
         .then((resp) => {
           const ProductosDB = resp.docs.map( (doc) => ({id: doc.id, ...doc.data()}) )
@@ -59,8 +59,9 @@ const Tienda = () => {
         <>
           <div className="contenedor">
             <h2 className='TitulosTienda'>Productos Nuevos</h2>
+            <h2 className='TitulosTienda'>Próximamente habra nuevos Productos</h2>
             <Grid container spacing={4} columns={{ xs: 4, sm: 8, md: 12 }} direction="row" justifyContent="space-around" alignItems="center">
-              { ProductosN.map((Productos) => <Grid item key={Productos.Id}><CardTienda Productos={Productos}/></Grid>) }
+            { ProductosN.map((Productos) => <Grid item key={Productos.Id}><CardTienda Productos={Productos}/></Grid>) }
             </Grid>
           </div>
           <div className="contenedor">

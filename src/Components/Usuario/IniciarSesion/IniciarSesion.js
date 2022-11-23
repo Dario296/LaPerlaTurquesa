@@ -33,8 +33,8 @@ const IniciarSesion = () => {
   }
   return (
     <Container component="main" maxWidth="xs">
-      <Button onClick={iniciarFacebook} fullWidth variant="contained" sx={{ mt: 15, mb: 2 }}>Iniciar Con Facebook</Button>
-      <Button onClick={iniciarGoogle} fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>Iniciar Con Google</Button>
+      {/* <Button onClick={iniciarFacebook} fullWidth variant="contained" sx={{ mt: 15, mb: 2 }}>Iniciar Con Facebook</Button> */}
+      <Button onClick={iniciarGoogle} fullWidth variant="contained" sx={{ mt: 18, mb: 2 }}>Iniciar Con Google</Button>
     </Container>
   );
 }

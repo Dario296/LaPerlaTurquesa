@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import Carrito from "./Components/Carrito/Carrito";
 import Contacto from "./Components/Contacto/Contacto";
 import Footer from "./Components/Footer/Footer";
@@ -14,7 +14,7 @@ import { Provider } from "./Configuraciones/Context";
 function App() {
   return (
     <Provider>
-        <BrowserRouter>
+        <HashRouter>
           <NavBarTurquesa/>
           <Routes>
             <Route index element={<Inicio/>}/>
@@ -29,7 +29,7 @@ function App() {
             <Route path="*" element={<Navigate to="/"/>}/>
           </Routes>
           <Footer/>
-        </BrowserRouter>
+        </HashRouter>
         
     </Provider>
   );
