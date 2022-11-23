@@ -15,15 +15,15 @@ export default function CardDetalle({ Productos, Comprar, Restar, Sumar, user, E
                     <img src={Productos.Imagen} alt={Productos.Nombre} className="img-fluid imgProductos"/>
                 </div>
                 <div className='mx-3'>
-                    {user.email? <Typography variant='h4'>Precio: ${PrecioP}</Typography> : null}
-                    <Typography variant="h5">{Productos.Descripcion}</Typography>
+                    {user.email? <Typography variant='h4' className='Precio'>Precio: ${PrecioP}</Typography> : null}
+                    <Typography variant="h5" className='Detalle'>{Productos.Descripcion}</Typography>
                     {user.email?
                         <Box className="Contador">
                             {EstaEnCarrito(Productos.Id)
-                                ?   <>
+                                ?   <div className='btnFinales'>
                                         <Button className='SeguirCompra' variant="contained"><Link className='BtnCarrito' to="/Tienda">Seguir Comprando</Link></Button>
                                         <Button  className='TerminaCompra' variant="contained"><Link className='BtnCarrito' to="/Carrito">Terminar compra</Link></Button>
-                                    </>
+                                    </div>
                                 :   
                                 <>
                                     <Box className='Cantidad' sx={{ display: 'flex', alignItems: 'center'}}>
