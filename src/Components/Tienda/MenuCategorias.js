@@ -10,15 +10,19 @@ function MenuCategorias({handleCloseNavMenu}) {
   return (
     <NavDropdown className='MenuCategorias' >
 
-        <NavDropdown className='Menu' title="Categoria D" >
-          <NavDropdown.Item><Link className='Links1' to='/Tienda/Dijes De Piedra' onClick={handleCloseNavMenu}>Dijes De Piedra</Link></NavDropdown.Item>
-        </NavDropdown>
-
         <NavDropdown className='Menu' title="Categoria C" >
           <NavDropdown className='Menu' title="Cristal de Roca" >
             <NavDropdown.Item><Link className='Links1' to='/Tienda/Cristal de Roca 4mm' onClick={handleCloseNavMenu}>Cristal de Roca 4 mm</Link></NavDropdown.Item>
             <NavDropdown.Item><Link className='Links1' to='/Tienda/Cristal de Roca 6mm' onClick={handleCloseNavMenu}>Cristal de Roca 6 mm</Link></NavDropdown.Item>
           </NavDropdown>
+        </NavDropdown>
+
+        <NavDropdown className='Menu' title="Categoria D" >
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Dijes De Piedra' onClick={handleCloseNavMenu}>Dijes De Piedra</Link></NavDropdown.Item>
+        </NavDropdown>
+
+        <NavDropdown className='Menu' title="Categoria E" >
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Encerado Grande' onClick={handleCloseNavMenu}>Hilo Encerado Grande</Link></NavDropdown.Item>
         </NavDropdown>
 
         <NavDropdown className='Menu' title="Categoria F" >
