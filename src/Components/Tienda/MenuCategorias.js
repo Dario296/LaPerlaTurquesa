@@ -43,6 +43,14 @@ function MenuCategorias({handleCloseNavMenu}) {
           </NavDropdown>
           <NavDropdown.Item><Link className='Links1' to='/Tienda/Mostacilla' onClick={handleCloseNavMenu}>Mostacilla</Link></NavDropdown.Item>
         </NavDropdown>
+
+        <NavDropdown className='Menu' title="Categoria T" >
+          <NavDropdown className='Menu' title="Tira de Piedra" >
+            <NavDropdown.Item><Link className='Links1' to='/Tienda/Tira de Piedra 4mm' onClick={handleCloseNavMenu}>Tira de Piedra 4mm</Link></NavDropdown.Item>
+            <NavDropdown.Item><Link className='Links1' to='/Tienda/Tira de Piedra 6mm' onClick={handleCloseNavMenu}>Tira de Piedra 6mm</Link></NavDropdown.Item>
+            <NavDropdown.Item><Link className='Links1' to='/Tienda/Tira de Piedra 8mm' onClick={handleCloseNavMenu}>Tira de Piedra 8mm</Link></NavDropdown.Item>
+          </NavDropdown>
+        </NavDropdown>
         
       </NavDropdown>
   );

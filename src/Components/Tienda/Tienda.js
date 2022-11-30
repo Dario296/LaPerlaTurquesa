@@ -59,7 +59,7 @@ const Tienda = () => {
         <>
           <div className="contenedor">
             <h2 className='TitulosTienda'>Productos Nuevos</h2>
-            <h2 className='TitulosTienda'>Próximamente habra nuevos Productos</h2>
+            {/* <h2 className='TitulosTienda'>Próximamente habra nuevos Productos</h2> */}
             <Grid container spacing={4} columns={{ xs: 4, sm: 8, md: 12 }} direction="row" justifyContent="space-around" alignItems="center">
             { ProductosN.map((Productos) => <Grid item key={Productos.Id}><CardTienda Productos={Productos}/></Grid>) }
             </Grid>
