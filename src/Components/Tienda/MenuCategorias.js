@@ -18,6 +18,7 @@ function MenuCategorias({handleCloseNavMenu}) {
         </NavDropdown>
 
         <NavDropdown className='Menu' title="Categoria D" >
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Dijes' onClick={handleCloseNavMenu}>Dijes</Link></NavDropdown.Item>
           <NavDropdown.Item><Link className='Links1' to='/Tienda/Dijes De Piedra' onClick={handleCloseNavMenu}>Dijes De Piedra</Link></NavDropdown.Item>
         </NavDropdown>
 

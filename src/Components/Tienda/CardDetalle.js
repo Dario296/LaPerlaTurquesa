@@ -15,7 +15,10 @@ export default function CardDetalle({ Productos, Comprar, Restar, Sumar, user, E
                     <img src={Productos.Imagen} alt={Productos.Nombre} className="img-fluid imgProductos"/>
                 </div>
                 <div className='mx-3'>
-                    {user.email? <Typography variant='h4' className='Precio'>Precio: ${PrecioP}</Typography> : null}
+                    {user.email? <>
+                                    <Typography variant='h4' className='Precio'>Precio: ${PrecioP}</Typography>
+                                    <Typography variant="h5" className='TyC'>Todos los precios exhibidos son al por mayor. Precios al por menor se le suma IVA (21%). Para compra al por mayor llevar 10 artículos mínimo.</Typography>
+                                </> : null}
                     <Typography variant="h5" className='Detalle'>{Productos.Descripcion}</Typography>
                     {user.email?
                         <Box className="Contador">
@@ -35,6 +38,7 @@ export default function CardDetalle({ Productos, Comprar, Restar, Sumar, user, E
                                     <Button variant="contained" onClick={Comprar} className="Comprar">Añadir al Carrito</Button>
                                 </>
                             }
+                            
                         </Box>
                         :
                         <div className='Inicia'>Inicia sesion para poder comprar</div>
