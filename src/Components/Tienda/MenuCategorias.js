@@ -31,6 +31,10 @@ function MenuCategorias({handleCloseNavMenu}) {
           <NavDropdown.Item><Link className='Links1' to='/Tienda/Fornituras' onClick={handleCloseNavMenu}>Fornituras</Link></NavDropdown.Item>
         </NavDropdown>
 
+        <NavDropdown className='Menu' title="Categoria G" >
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Galon' onClick={handleCloseNavMenu}>Galon</Link></NavDropdown.Item>
+        </NavDropdown>
+
         <NavDropdown className='Menu' title="Categoria M" >
           <NavDropdown className='Menu' title="Madera" >
             <NavDropdown.Item><Link className='Links1' to='/Tienda/Madera 5mm' onClick={handleCloseNavMenu}>Madera 5mm</Link></NavDropdown.Item>
@@ -51,6 +55,11 @@ function MenuCategorias({handleCloseNavMenu}) {
             <NavDropdown.Item><Link className='Links1' to='/Tienda/Tira de Piedra 6mm' onClick={handleCloseNavMenu}>Tira de Piedra 6mm</Link></NavDropdown.Item>
             <NavDropdown.Item><Link className='Links1' to='/Tienda/Tira de Piedra 8mm' onClick={handleCloseNavMenu}>Tira de Piedra 8mm</Link></NavDropdown.Item>
           </NavDropdown>
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Tira de lentejuelas' onClick={handleCloseNavMenu}>Tira de lentejuelas</Link></NavDropdown.Item>
+        </NavDropdown>
+
+        <NavDropdown className='Menu' title="Categoria S" >
+          <NavDropdown.Item><Link className='Links1' to='/Tienda/Strass' onClick={handleCloseNavMenu}>Strass</Link></NavDropdown.Item>
         </NavDropdown>
         
       </NavDropdown>

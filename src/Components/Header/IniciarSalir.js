@@ -3,11 +3,14 @@ import { Avatar, Box, Button, IconButton, Menu, MenuItem, Tooltip } from '@mui/m
 import { Link } from 'react-router-dom';
 import app from '../../Configuraciones/Firebase';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const auth = getAuth(app);
+const db = getFirestore(app)
 
 const IniciarSalir = () => {
 
+    const [Productos, setProductos] = useState([])
     const [user, setUser] = useState({})
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -27,13 +30,22 @@ const IniciarSalir = () => {
       })
     },[])
 
+    useEffect(()=>{
+      const ProductosRef = collection(db, 'Listado Productos')
+        getDocs(ProductosRef)
+          .then((resp) => {
+            const ProductosDB = resp.docs.map( (doc) => ({id: doc.id, ...doc.data()}) )
+            setProductos(ProductosDB)
+          })
+    },[])
+
     const salir = async()=>{
       if (user.email) {
         await signOut(auth);
         setUser({})
       }
     }
-
+    let usuario = "rodriguez.dario124@gmail.com"
     return (
         <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
@@ -53,6 +65,15 @@ const IniciarSalir = () => {
                         <Link className='Links1' to="/">Salir</Link>
                     </Button>
                 </MenuItem>
+                {user.email === usuario?
+                  <MenuItem onClick={handleCloseUserMenu}>
+                      <Button>
+                        <p>Total Productos = {Productos.length}</p>
+                      </Button>
+                  </MenuItem>
+                  :
+                  <></>
+                }
             </Menu>
         </Box>
     )
